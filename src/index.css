@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-panel: 11 14 20;
+  --color-panel-raised: 18 22 31;
+  --color-panel-border: 35 42 56;
+  --color-copper: 217 119 87;
+  --color-copper-dim: 138 84 64;
+  --color-mint: 95 191 159;
+  --color-warn-amber: 224 169 59;
+  --color-text-primary: 237 239 243;
+  --color-text-dim: 136 145 163;
+}
+
+html.light {
+  --color-panel: 247 245 242;
+  --color-panel-raised: 255 255 255;
+  --color-panel-border: 224 221 215;
+  --color-copper: 196 100 68;
+  --color-copper-dim: 158 94 70;
+  --color-mint: 47 140 114;
+  --color-warn-amber: 168 118 30;
+  --color-text-primary: 23 27 33;
+  --color-text-dim: 100 108 122;
+}
+
+html, body {
+  transition: background-color 0.2s ease;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #232A38;
+  border-radius: 999px;
+}
+
+.font-display {
+  letter-spacing: -0.01em;
+}
+
+.content-shell {
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .content-shell {
+    padding-left: var(--sidebar-w, 240px);
+    transition: padding-left 0.2s ease;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+.pulse-glow {
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
